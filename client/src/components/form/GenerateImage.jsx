@@ -19,12 +19,19 @@ const Top = styled.div`
   display: flex;
   flex-direction: column;
   gap: 6px;
+  @media (max-width: 600px) {
+    padding-top: 320px; /* Increase top padding for small screens */
+  }
 `;
 
 const Title = styled.div`
   font-size: 28px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_primary};
+
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
 `;
 
 const Desc = styled.div`
