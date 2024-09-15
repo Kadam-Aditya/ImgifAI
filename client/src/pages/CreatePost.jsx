@@ -15,7 +15,7 @@ const Container = styled.div`
   @media (max-width: 768px) {
     padding: 6px 10px;
     padding-bottom: 40px;
-    padding-top: 320px
+    padding-top: 300px
   }
   background: ${({ theme }) => theme.background};
 `;
