@@ -12,6 +12,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 16px;
+
+  @media (max-width: 600px) {
+    min-height: 350px; 
+  }
 `;
 
 const Image = styled.img`
@@ -20,6 +24,11 @@ const Image = styled.img`
   background: ${({ theme }) => theme.black + 50};
   border-radius: 18px;
   object-fit: cover;
+
+  @media (max-width: 600px) {
+    border-radius: 10px;
+    object-fit: contain;
+  }
 `;
 
 const GeneratedImageCard = ({ src, loading }) => {
