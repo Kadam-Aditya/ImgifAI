@@ -14,6 +14,7 @@ const Container = styled.div`
   gap: 20px;
   @media (max-width: 768px) {
     padding: 6px 10px;
+    padding-bottom: 40px;
   }
   background: ${({ theme }) => theme.background};
 `;
