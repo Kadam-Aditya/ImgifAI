@@ -20,7 +20,7 @@ const Top = styled.div`
   flex-direction: column;
   gap: 6px;
   @media (max-width: 600px) {
-    padding-top: 320px; /* Increase top padding for small screens */
+    padding-top: 200px; /* Increase top padding for small screens */
   }
 `;
 
