@@ -94,18 +94,17 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    if (!search) {
-      setFilteredPost(posts);
-    }
-    const filteredPosts = posts.filter((post) => {
-      const promptMatch = post?.prompt?.toLowerCase().includes(search);
-      const authorMatch = post?.author?.toLowerCase().includes(search);
+    const searchLower = search.toLowerCase(); // Convert search term to lowercase once
 
-      return promptMatch || authorMatch;
-    });
-
-    if (search) {
-      setFilteredPost(filteredPosts);
+    if (!searchLower) {
+      setFilteredPost(posts); // If search is empty, show all posts
+    } else {
+      const filteredPosts = posts.filter((post) => {
+        const promptMatch = post?.prompt?.toLowerCase().includes(searchLower); // Convert prompt to lowercase for case-insensitive match
+        const authorMatch = post?.author?.toLowerCase().includes(searchLower); // Convert author to lowercase for case-insensitive match
+        return promptMatch || authorMatch;
+      });
+      setFilteredPost(filteredPosts); // Update filtered posts
     }
   }, [posts, search]);
 
